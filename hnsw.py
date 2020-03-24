@@ -347,7 +347,7 @@ if __name__ == '__main__':
             bx, by = b
             dx = ax - bx
             dy = ay - by
-            return (dx*dx + dy*dy) ** 0.5
+            return (dx**2 + dy**2) ** 0.5
 
     hnsw = HNSW(d, init_connection=args.m0, heuristic=not args.noheuristic)
     adder = hnsw.balanced_add if args.balanced else hnsw.add
